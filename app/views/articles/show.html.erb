@@ -1,0 +1,10 @@
+<div class="container">
+<%= render 'header' %>
+
+  <h1><%= @article.title %></h1>
+  <p><%= @article.content %></p>
+  <p><%= link_to 'Update', edit_article_path(@article) %></p>
+  <p><%= link_to "Delete", article_path(@article),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %></p>
+</div>
